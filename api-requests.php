@@ -82,7 +82,7 @@ function searchMovies($baseUrl, $query) {
     $query = rawurlencode($query);
 
     curl_setopt_array($ch, [
-        CURLOPT_URL => $baseUrl . '/api/movies?details=minimal&search='.$query,
+        CURLOPT_URL => $baseUrl . '/movies?details=minimal&search='.$query,
         CURLOPT_RETURNTRANSFER => true
     ]);
 
@@ -101,7 +101,7 @@ function getMovies($baseUrl) {
     $ch = curl_init();
 
     curl_setopt_array($ch, [
-        CURLOPT_URL => $baseUrl . '/api/movies?details=minimal',
+        CURLOPT_URL => $baseUrl . '/movies?details=minimal',
         CURLOPT_RETURNTRANSFER => true
     ]);
 
@@ -120,7 +120,7 @@ function getFilms($baseUrl) {
     $ch = curl_init();
 
     curl_setopt_array($ch, [
-        CURLOPT_URL => $baseUrl . '/api/movies?details=minimal&type=film',
+        CURLOPT_URL => $baseUrl . '/movies?details=minimal&type=film',
         CURLOPT_RETURNTRANSFER => true
     ]);
 
@@ -139,7 +139,7 @@ function getSeriesList($baseUrl) {
     $ch = curl_init();
 
     curl_setopt_array($ch, [
-        CURLOPT_URL => $baseUrl . '/api/movies?details=minimal&type=series',
+        CURLOPT_URL => $baseUrl . '/movies?details=minimal&type=series',
         CURLOPT_RETURNTRANSFER => true
     ]);
 
@@ -158,7 +158,7 @@ function getMiniseriesList($baseUrl) {
     $ch = curl_init();
 
     curl_setopt_array($ch, [
-        CURLOPT_URL => $baseUrl . '/api/movies?details=minimal&type=miniseries',
+        CURLOPT_URL => $baseUrl . '/movies?details=minimal&type=miniseries',
         CURLOPT_RETURNTRANSFER => true
     ]);
 
@@ -177,7 +177,7 @@ function getMovie($baseUrl, $id) {
     $ch = curl_init();
 
     curl_setopt_array($ch, [
-        CURLOPT_URL => $baseUrl . '/api/movies/' . $id,
+        CURLOPT_URL => $baseUrl . '/movies/' . $id,
         CURLOPT_RETURNTRANSFER => true
     ]);
 
@@ -197,7 +197,7 @@ function getMoviesFiltered($baseUrl, $filters = []) {
     $ch = curl_init();
 
     curl_setopt_array($ch, [
-        CURLOPT_URL => $baseUrl . '/api/movies?' . $query,
+        CURLOPT_URL => $baseUrl . '/movies?' . $query,
         CURLOPT_RETURNTRANSFER => true
     ]);
 
@@ -218,7 +218,7 @@ function searchPersons($baseUrl, $query) {
     $query = rawurlencode($query);
 
     curl_setopt_array($ch, [
-        CURLOPT_URL => $baseUrl . '/api/persons?details=minimal&search='.$query,
+        CURLOPT_URL => $baseUrl . '/persons?details=minimal&search='.$query,
         CURLOPT_RETURNTRANSFER => true
     ]);
 
@@ -237,7 +237,7 @@ function getPersons($baseUrl) {
     $ch = curl_init();
 
     curl_setopt_array($ch, [
-        CURLOPT_URL => $baseUrl . '/api/persons?details=minimal',
+        CURLOPT_URL => $baseUrl . '/persons?details=minimal',
         CURLOPT_RETURNTRANSFER => true
     ]);
 
@@ -256,7 +256,7 @@ function getActors($baseUrl) {
     $ch = curl_init();
 
     curl_setopt_array($ch, [
-        CURLOPT_URL => $baseUrl . '/api/persons?details=minimal&category=actor',
+        CURLOPT_URL => $baseUrl . '/persons?details=minimal&category=actor',
         CURLOPT_RETURNTRANSFER => true
     ]);
 
@@ -275,7 +275,7 @@ function getVoiceActors($baseUrl) {
     $ch = curl_init();
 
     curl_setopt_array($ch, [
-        CURLOPT_URL => $baseUrl . '/api/persons?details=minimal&category=voice_actor',
+        CURLOPT_URL => $baseUrl . '/persons?details=minimal&category=voice_actor',
         CURLOPT_RETURNTRANSFER => true
     ]);
 
@@ -294,7 +294,7 @@ function getDirectors($baseUrl) {
     $ch = curl_init();
 
     curl_setopt_array($ch, [
-        CURLOPT_URL => $baseUrl . '/api/persons?details=minimal&category=director',
+        CURLOPT_URL => $baseUrl . '/persons?details=minimal&category=director',
         CURLOPT_RETURNTRANSFER => true
     ]);
 
@@ -313,7 +313,7 @@ function getPerson($baseUrl, $id) {
     $ch = curl_init();
 
     curl_setopt_array($ch, [
-        CURLOPT_URL => $baseUrl . '/api/persons/' . $id,
+        CURLOPT_URL => $baseUrl . '/persons/' . $id,
         CURLOPT_RETURNTRANSFER => true
     ]);
 
@@ -332,7 +332,7 @@ function getRelations($baseUrl) {
     $ch = curl_init();
 
     curl_setopt_array($ch, [
-        CURLOPT_URL => $baseUrl . '/api/relations',
+        CURLOPT_URL => $baseUrl . '/relations',
         CURLOPT_RETURNTRANSFER => true
     ]);
 
@@ -351,7 +351,7 @@ function getRelation($baseUrl, $id) {
     $ch = curl_init();
 
     curl_setopt_array($ch, [
-        CURLOPT_URL => $baseUrl . '/api/relations/'.$id,
+        CURLOPT_URL => $baseUrl . '/relations/'.$id,
         CURLOPT_RETURNTRANSFER => true
     ]);
 
@@ -370,7 +370,7 @@ function getAwards($baseUrl) {
     $ch = curl_init();
 
     curl_setopt_array($ch, [
-        CURLOPT_URL => $baseUrl . '/api/awards',
+        CURLOPT_URL => $baseUrl . '/awards',
         CURLOPT_RETURNTRANSFER => true
     ]);
 
@@ -389,7 +389,7 @@ function getAwardsCategories($baseUrl) {
     $ch = curl_init();
 
     curl_setopt_array($ch, [
-        CURLOPT_URL => $baseUrl . '/api/awards/categories',
+        CURLOPT_URL => $baseUrl . '/awards/categories',
         CURLOPT_RETURNTRANSFER => true
     ]);
 
@@ -408,7 +408,7 @@ function getAward($baseUrl, $id) {
     $ch = curl_init();
 
     curl_setopt_array($ch, [
-        CURLOPT_URL => $baseUrl . '/api/awards/' . $id,
+        CURLOPT_URL => $baseUrl . '/awards/' . $id,
         CURLOPT_RETURNTRANSFER => true
     ]);
 

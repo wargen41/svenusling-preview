@@ -29,7 +29,7 @@ wget "https://github.com/$source_user/$source_rep/archive/$source_branch.zip"
 unzip main.zip "$source_dir/*"
 
 # Move files to their respective homes
-rsync -av exclude "config.php" "$source_dir/" public_html/
+rsync -av "$source_dir/public" public_html/
 
 # Remove temporary directories and files
 rm "$source_branch.zip"

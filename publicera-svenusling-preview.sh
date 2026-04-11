@@ -36,6 +36,7 @@ rm "$source_branch.zip"
 rm -r "$source_dir"
 
 # Kör composer update ifall något har ändrats i composer.json
-../../composer.phar update
+cd public_html
+../../../composer.phar update
 
 echo "Klart!"

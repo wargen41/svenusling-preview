@@ -36,6 +36,7 @@ h1,h2,h3,h4,h5,h6
 
 :root
 {
+    --body-margin-bottom: 4rem;
     --main-margin: 1.5rem;
     --main-margin-negative: calc(0rem - var(--main-margin));
     --widget-padding-top: .5rem;
@@ -91,7 +92,7 @@ html
 
 body
 {
-    margin: 0 0 4rem 0;
+    margin: 0 0 var(--body-margin-bottom) 0;
     font-size: 18px;
     text-align: right;
     font-family: Seravek,'Gill Sans Nova',Ubuntu,Calibri,'DejaVu Sans',source-sans-pro,sans-serif;

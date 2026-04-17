@@ -644,8 +644,8 @@ a
 
     .main.menu::backdrop
     {
-        background: black;
-        opacity: .6;
+        background-color: rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(2px);
     }
 }
 

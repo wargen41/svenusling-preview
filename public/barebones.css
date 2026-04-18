@@ -62,8 +62,10 @@ h1,h2,h3,h4,h5,h6
     --background-sticky-heading: rgba(238, 238, 238, 0.85);
     --background-sticky-heading-opaque: rgba(238, 238, 238, 1);
     --gradient-sticky-heading: linear-gradient(0deg, var(--background-sticky-heading-opaque) 0%, var(--background-sticky-heading-opaque) 100%);
-    --border-color-default: black;
+    --border-color-default: white;
     --border-color-splash: #002000;
+    --border-width-default: 2px;
+    --border-style-default: groove;
 }
 
 @media (prefers-color-scheme:dark)
@@ -81,7 +83,6 @@ h1,h2,h3,h4,h5,h6
         --text-color-faint: #555;
         --background-sticky-heading: rgba(34, 34, 34, 0.85);
         --background-sticky-heading-opaque: rgba(34, 34, 34, 1);
-        --border-color-default: black;
     }
 }
 
@@ -231,7 +232,7 @@ a
 .menu
 {
     --border-radius: 1.1rem;
-    --border-thickness: 1px;
+    --border-thickness: var(--border-width-default);
     --padding-inline: calc(var(--border-radius) * 0.75);
     --padding-block: calc(var(--border-radius) * 0.6);
     --list-padding: calc(var(--padding-inline) * 0.3);
@@ -253,7 +254,7 @@ a
 
     background-color: var(--background-color-alternate);
     color: var(--text-color-alternate);
-    border: var(--border-thickness) solid var(--border-color-default);
+    border: var(--border-thickness) var(--border-style-default) var(--border-color-default);
     border-radius: var(--border-radius);
     margin: 0;
     padding: 0 0 var(--border-radius) 0;
@@ -804,7 +805,7 @@ header
     flex-direction: row;
     background: var(--background-color-splash);
     color: var(--text-color-splash);
-    border-bottom: 1px solid var(--border-color-default);
+    border-bottom: none;
     
     box-shadow: 0 2px 4px #101010;
 }

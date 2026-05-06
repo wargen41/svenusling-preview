@@ -30,7 +30,7 @@ echo "</div>";
 echo "<label for=\"menu-widget-button\" class=\"widget-label\" id=\"menu-widget-label\">Meny</label>";
 echo "<div class=\"widget right\" id=\"menu-widget\">";
 echo "<button popovertarget=\"menu-main\" class=\"button\" id=\"menu-widget-button\" title=\"Meny\">";
-echo "<img class=\"circle\" alt=\"Meny\" src=\"https://svenusling.jlxli.eu/assets/logo.jpg\">";
+echo "<img class=\"circle\" alt=\"Meny\" src=\"https://svenusling.se/assets/logo.jpg\">";
 echo "</button>";
 echo "</div>";
 

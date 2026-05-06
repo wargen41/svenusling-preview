@@ -55,12 +55,15 @@ function sanitizeQuery(string $value): string {
     return $value;
 }
 
-function suRating(int $rating): string {
+function suRating($rating): string {
+    if(!is_integer($rating)){
+        return '';
+    }
     if($rating == 0){
         return '-';
     }
 
-    return str_pad('', $rating, '+');
+    return str_pad('', round($rating / 20), '+');
 }
 
 function mainHeading(string $value): string {

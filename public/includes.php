@@ -6,7 +6,7 @@ $md_converter = new CommonMarkConverter([
     'allow_unsafe_links' => false,
 ]);
 
-require __DIR__ . '/../config.php';
+require __DIR__ . '/../../config.php';
 require __DIR__ . '/api-requests.php';
 
 if(isset($_GET) && isset($_GET['query'])){

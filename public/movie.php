@@ -48,7 +48,7 @@ try {
         }
         if(!empty($directors)){
             echo "<h2>Regi</h2>";
-            echo "<ul>";
+            echo "<ol>";
             foreach($directors as $item){
                 $id = $item['person_id'] ?? null;
                 $name = $item['person_name'];
@@ -58,11 +58,11 @@ try {
                     echo "<li>$name</li>";
                 }
             }
-            echo "</ul>";
+            echo "</ol>";
         }
         if(!empty($actors)){
             echo "<h2>Skådespelare</h2>";
-            echo "<ul>";
+            echo "<ol>";
             foreach($actors as $item){
                 $id = $item['person_id'] ?? null;
                 $name = $item['person_name'];
@@ -73,11 +73,11 @@ try {
                     echo "<li>$name$role</li>";
                 }
             }
-            echo "</ul>";
+            echo "</ol>";
         }
         if(!empty($voice_actors)){
             echo "<h2>Röster</h2>";
-            echo "<ul>";
+            echo "<ol>";
             foreach($voice_actors as $item){
                 $id = $item['person_id'] ?? null;
                 $name = $item['person_name'];
@@ -88,7 +88,7 @@ try {
                     echo "<li>$name$role</li>";
                 }
             }
-            echo "</ul>";
+            echo "</ol>";
         }
         if(!empty($trivia)){
             echo "<h2>Visste du?</h2>";

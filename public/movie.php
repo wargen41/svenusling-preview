@@ -50,9 +50,13 @@ try {
             echo "<h2>Regi</h2>";
             echo "<ul>";
             foreach($directors as $item){
-                $id = $item['id'];
-                $name = $item['name'];
-                echo "<li><a href=\"person.php?id=$id\">$name</a></li>";
+                $id = $item['person_id'] ?? null;
+                $name = $item['person_name'];
+                if($id){
+                    echo "<li><a href=\"person.php?id=$id\">$name</a></li>";
+                }else{
+                    echo "<li>$name</li>";
+                }
             }
             echo "</ul>";
         }
@@ -60,9 +64,14 @@ try {
             echo "<h2>Skådespelare</h2>";
             echo "<ul>";
             foreach($actors as $item){
-                $id = $item['id'];
-                $name = $item['name'];
-                echo "<li><a href=\"person.php?id=$id\">$name</a></li>";
+                $id = $item['person_id'] ?? null;
+                $name = $item['person_name'];
+                $role = $item['role_name'] ? ' – '.$item['role_name'] : '';
+                if($id){
+                    echo "<li><a href=\"person.php?id=$id\">$name</a>$role</li>";
+                }else{
+                    echo "<li>$name$role</li>";
+                }
             }
             echo "</ul>";
         }
@@ -70,9 +79,14 @@ try {
             echo "<h2>Röster</h2>";
             echo "<ul>";
             foreach($voice_actors as $item){
-                $id = $item['id'];
-                $name = $item['name'];
-                echo "<li><a href=\"person.php?id=$id\">$name</a></li>";
+                $id = $item['person_id'] ?? null;
+                $name = $item['person_name'];
+                $role = $item['role_name'] ? ' – '.$item['role_name'] : '';
+                if($id){
+                    echo "<li><a href=\"person.php?id=$id\">$name</a>$role</li>";
+                }else{
+                    echo "<li>$name$role</li>";
+                }
             }
             echo "</ul>";
         }

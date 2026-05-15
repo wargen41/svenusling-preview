@@ -10,7 +10,7 @@ try {
     echo mainHeading("Alla inlagda serier");
     echo "<p>Antal: " . $movies['pagination']['total'] . "</p>";
 
-    echo "<ul class=\"long list\">";
+    echo "<ol class=\"long list\">";
     foreach ($movies['data'] as $item) {
         $id = $item['id'];
         $title = $item['title'];
@@ -26,7 +26,7 @@ try {
         }
         echo "<li><a href=\"movie.php?id=$id\">$title$year_str$rating_str</a></li>";
     }
-    echo "</ul>";
+    echo "</ol>";
 
 } catch (Exception $e) {
     echo "Error: " . $e->getMessage();

@@ -10,13 +10,13 @@ try {
     echo mainHeading("Alla röstskådespelare");
     echo "<p>Antal: " . $persons['pagination']['total'] . "</p>";
 
-    echo "<ul class=\"long list\">";
+    echo "<ol class=\"long list\">";
     foreach ($persons['data'] as $item) {
         $id = $item['id'];
         $name = $item['name'];
         echo "<li><a href=\"person.php?id=$id\">$name</a></li>";
     }
-    echo "</ul>";
+    echo "</ol>";
 
 } catch (Exception $e) {
     echo "Error: " . $e->getMessage();

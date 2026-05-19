@@ -35,7 +35,7 @@ try {
             echo "<h2>Visste du?</h2>";
             echo "<ul>";
             foreach($trivia as $item){
-                $movie = $item['movie_title']
+                $movie = $item['movie_title'];
                 $md = "";
                 if($item['en']){
                     $md = $item['en'];

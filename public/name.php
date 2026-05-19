@@ -7,6 +7,7 @@ try {
     if(isset($_GET['name'])){
 
         $name = $_GET['name'];
+        error_log("name: $name");
 
         // Get name data
         $data = getName($baseUrl, $name)['data'];

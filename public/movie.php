@@ -70,7 +70,7 @@ try {
                 if($id){
                     echo "<li><a href=\"person.php?id=$id\">$name</a>$role</li>";
                 }else{
-                    $nameURL = $baseUrl . "/names/" . urlencode($name);
+                    $nameURL = $baseUrl . "/names/" . rawurlencode($name);
                     echo "<li>$name<a href=\"$nameURL\">≈</a>$role</li>";
                 }
             }

@@ -55,7 +55,7 @@ try {
                 if($id){
                     echo "<li><a href=\"person.php?id=$id\">$name</a></li>";
                 }else{
-                    $nameURL = $baseUrl . "/names/" . rawurlencode($name);
+                    $nameURL = "name.php?name=" . rawurlencode($name);
                     echo "<li>$name<a href=\"$nameURL\">≈</a></li>";
                 }
             }

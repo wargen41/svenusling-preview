@@ -19,7 +19,7 @@ try {
             echo "<h2>Medverkan</h2>";
             echo "<ul>";
             foreach($crew as $item){
-                $movie = $item['movie_title']
+                $movie = $item['movie_title'];
                 $category = $item['category'];
                 $cat = " ($category)";
                 $role_name = $item['role_name'];

@@ -55,7 +55,7 @@ try {
                 if($id){
                     echo "<li><a href=\"person.php?id=$id\">$name</a></li>";
                 }else{
-                    $nameURL = "name.php?name=" . rawurlencode($name);
+                    $nameURL = "name.php?n=" . rawurlencode($name);
                     echo "<li>$name<a href=\"$nameURL\">≈</a></li>";
                 }
             }
@@ -71,7 +71,7 @@ try {
                 if($id){
                     echo "<li><a href=\"person.php?id=$id\">$name</a>$role</li>";
                 }else{
-                    $nameURL = "name.php?name=" . rawurlencode($name);
+                    $nameURL = "name.php?n=" . rawurlencode($name);
                     echo "<li>$name<a href=\"$nameURL\">≈</a>$role</li>";
                 }
             }
@@ -87,7 +87,7 @@ try {
                 if($id){
                     echo "<li><a href=\"person.php?id=$id\">$name</a>$role</li>";
                 }else{
-                    $nameURL = "name.php?name=" . rawurlencode($name);
+                    $nameURL = "name.php?n=" . rawurlencode($name);
                     echo "<li>$name<a href=\"$nameURL\">≈</a>$role</li>";
                 }
             }

@@ -4,10 +4,9 @@ require __DIR__ . '/includes.php';
 try {
     $baseUrl = API_BASE_URL;
 
-    if(isset($_GET['name'])){
+    if(isset($_GET['n'])){
 
-        $name = $_GET['name'];
-        error_log("name: $name");
+        $name = $_GET['n'];
 
         // Get name data
         $data = getName($baseUrl, $name)['data'];
@@ -50,7 +49,7 @@ try {
         }
 
     }else{
-        echo "Inget id angett";
+        echo "Inget namn angett";
     }
 
 } catch (Exception $e) {
